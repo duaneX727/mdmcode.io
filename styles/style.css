@@ -236,12 +236,14 @@ p {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+/* Cross-Browser High-Compatibility Focus States */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
 }
 
 /* Form Action Button */
