@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mdmcode.io | Enterprise Software Solutions</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -56,6 +57,40 @@
                 <a href="#" class="card-btn">Query Database &rarr;</a>
             </div>
         </div>
+        <hr class="divider">
+
+        <section class="inquiry-section">
+            <h3>Submit a Project Brief</h3>
+            <p class="section-desc">Have an integration or automation requirement? Submit your system specs below to
+                initialize
+                a secure project routing pipeline.</p>
+
+            <form id="projectForm"
+                onsubmit="event.preventDefault(); alert('Form connected! Pipeline integration ready.');">
+                <div class="form-group">
+                    <label for="clientName">Client Identity / Company</label>
+                    <input type="text" id="clientName" placeholder="e.g., Enterprise Corp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="infrastructure">Target Infrastructure Stack</label>
+                    <select id="infrastructure">
+                        <option value="node-webhook">Node.js Webhook Architecture</option>
+                        <option value="cloudflare-edge">Cloudflare Edge & Zero Trust</option>
+                        <option value="sqlite-automation">SQLite Data Pipelines</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDetails">Scope of Automation</label>
+                    <textarea id="projectDetails" rows="4"
+                        placeholder="Describe data streams, endpoint requirements, or pipeline logic..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Deploy Request Payload</button>
+            </form>
+        </section>
     </main>
 
     <!-- Professional Footer -->
@@ -64,3 +99,5 @@
     </footer>
 
 </body>
+
+</html>
