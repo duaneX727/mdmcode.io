@@ -17,13 +17,18 @@
      text-align: center;
  }
 
+ /* Find the .container block and update it to this: */
  .container {
-     max-width: 600px;
-     padding: 2rem;
+     width: 90%;
+     max-width: 900px;
+     /* Increased from 600px to give the grid space */
+     margin: 2rem auto;
+     padding: 2.5rem;
      background: var(--card-bg);
      border-radius: 12px;
      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-     border: 1px solid #334155;
+     border: 1px solid var(--border-color);
+     text-align: center;
  }
 
  h1 {
