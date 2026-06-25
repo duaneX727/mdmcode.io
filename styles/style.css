@@ -1,88 +1,171 @@
- :root {
-     --bg-color: #0f172a;
-     --text-color: #f8fafc;
-     --accent-color: #38bdf8;
-     --card-bg: #1e293b;
- }
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --accent-color: #38bdf8;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
 
- body {
-     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-     background-color: var(--bg-color);
-     color: var(--text-color);
-     margin: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
-     text-align: center;
- }
+/* Base structural layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
- /* Find the .container block and update it to this: */
- .container {
-     width: 90%;
-     max-width: 900px;
-     /* Increased from 600px to give the grid space */
-     margin: 2rem auto;
-     padding: 2.5rem;
-     background: var(--card-bg);
-     border-radius: 12px;
-     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-     border: 1px solid var(--border-color);
-     text-align: center;
- }
+/* Top Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
 
- h1 {
-     color: var(--accent-color);
-     font-size: 2.5rem;
-     margin-bottom: 0.5rem;
- }
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    /* Allows links to wrap on small screens instead of crushing */
+    gap: 1rem;
+}
 
- h2 {
-     font-size: 1.25rem;
-     color: #94a3b8;
-     font-weight: 400;
-     margin-top: 0;
- }
+.logo {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
 
- p {
-     font-size: 1.1rem;
-     line-height: 1.6;
-     color: #cbd5e1;
- }
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 1.5rem;
+    transition: color 0.2s;
+}
 
- /* Responsive Operations Grid */
- .capabilities-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 1.5rem;
-     margin-top: 2.5rem;
-     text-align: left;
- }
+.nav-links a:hover {
+    color: var(--accent-color);
+}
 
- /* Individual Capability Cards */
- .cap-card {
-     background-color: #0f172a;
-     /* Darker offset background to contrast the main container */
-     padding: 1.5rem;
-     border-radius: 8px;
-     border: 1px solid var(--border-color);
-     transition: transform 0.2s, border-color 0.2s;
- }
+/* Main Layout Block */
+.container {
+    width: 90%;
+    max-width: 900px;
+    /* Expanded from 600px to allow grid items side-by-side */
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
 
- .cap-card:hover {
-     transform: translateY(-2px);
-     border-color: var(--accent-color);
- }
+h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
 
- .cap-card h3 {
-     color: var(--text-color);
-     margin-top: 0;
-     margin-bottom: 0.5rem;
-     font-size: 1.1rem;
- }
+h2 {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-top: 0;
+}
 
- .cap-card p {
-     font-size: 0.9rem;
-     line-height: 1.5;
-     color: #94a3b8;
- }
+.divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 1.5rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 0;
+}
+
+/* Responsive Operations Grid */
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+/* Individual Capability Cards */
+.cap-card {
+    background-color: var(--bg-color);
+    /* Offset contrast from the main container background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.cap-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+.cap-card h3 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.cap-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #94a3b8;
+}
+
+/* Persistent Stick-to-Bottom Footer */
+.footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    background-color: #0b0f19;
+    color: #64748b;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: auto;
+    /* Clean structural push instead of floating position settings */
+}
+
+/* Mobile Optimization Breakpoint */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        margin: 0 0.75rem;
+        /* Even inline padding for mobile menu rows */
+    }
+
+    .container {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+        /* Drops grid into a tight single-column viewport list */
+        gap: 1rem;
+    }
+}
