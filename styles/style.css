@@ -12,6 +12,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
+    padding-top: 80px;
+    /* match nav height */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -96,12 +98,42 @@ p {
 }
 
 /* Responsive Operations Grid */
+/* Capabilities Grid Container */
 .capabilities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     text-align: left;
+}
+
+/* Individual Capability Cards */
+.cap-card {
+    background-color: #0f172a;
+    /* Slightly darker background to pop from container */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.cap-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+.cap-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.cap-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin-bottom: 0;
 }
 
 /* Individual Capability Cards */
@@ -130,6 +162,31 @@ p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: #94a3b8;
+}
+
+/* Card Interactive Action Buttons */
+.card-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: rgba(56, 189, 248, 0.06);
+    /* Subdued matching tint background */
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-btn:hover {
+    color: var(--bg-color);
+    background-color: var(--accent-color);
+    /* Smooth reverse contrast switch on hover */
+    border-color: var(--accent-color);
+    transform: translateX(2px);
+    /* Subtle forward nudge animation */
 }
 
 /* Persistent Stick-to-Bottom Footer */
