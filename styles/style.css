@@ -44,3 +44,40 @@
      line-height: 1.6;
      color: #cbd5e1;
  }
+
+ /* Responsive Operations Grid */
+ .capabilities-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1.5rem;
+     margin-top: 2.5rem;
+     text-align: left;
+ }
+
+ /* Individual Capability Cards */
+ .cap-card {
+     background-color: #0f172a;
+     /* Darker offset background to contrast the main container */
+     padding: 1.5rem;
+     border-radius: 8px;
+     border: 1px solid var(--border-color);
+     transition: transform 0.2s, border-color 0.2s;
+ }
+
+ .cap-card:hover {
+     transform: translateY(-2px);
+     border-color: var(--accent-color);
+ }
+
+ .cap-card h3 {
+     color: var(--text-color);
+     margin-top: 0;
+     margin-bottom: 0.5rem;
+     font-size: 1.1rem;
+ }
+
+ .cap-card p {
+     font-size: 0.9rem;
+     line-height: 1.5;
+     color: #94a3b8;
+ }
