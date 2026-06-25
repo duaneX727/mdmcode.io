@@ -189,6 +189,83 @@ p {
     /* Subtle forward nudge animation */
 }
 
+/* Inquiry Section Formatting */
+.inquiry-section {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+.inquiry-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    background-color: #0f172a;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+/* Form Action Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #7dd3fc;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
 /* Persistent Stick-to-Bottom Footer */
 .footer {
     width: 100%;
